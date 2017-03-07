@@ -21,7 +21,7 @@ def changeName(path, nPrefix):
                     if suffix == None:
                         suffix = ''
                     if not dic.has_key(prefix):
-                        dic[prefix] = nPrefix + "_" + prefix
+                        dic[prefix] = nPrefix + prefix
                         count += 1
                     newName = dic[prefix] + suffix + enffix
                     os.rename(path + '/' + filename, path + '/' + newName)

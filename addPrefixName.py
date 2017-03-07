@@ -21,10 +21,9 @@ def changeName(path, nPrefix):
                     if suffix == None:
                         suffix = ''
                     if not dic.has_key(prefix):
-                        dic[prefix] = nPrefix + "_" + str(count)
+                        dic[prefix] = nPrefix + "_" + prefix
                         count += 1
                     newName = dic[prefix] + suffix + enffix
-
                     os.rename(path + '/' + filename, path + '/' + newName)
             else:
                 changeName(path + '/' + filename, nPrefix)
@@ -33,4 +32,4 @@ if __name__ == "__main__":
     path = sys.argv[1]
     nPrefix = sys.argv[2]
     changeName(path, nPrefix)
-    print '===>>> changeName finish , count == ' + str(count)
+    print '===>>> addPrefixName with %s finish' % nPrefix

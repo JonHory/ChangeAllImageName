@@ -2,7 +2,7 @@ import os
 import re
 import sys
 
-pattern = '([\w\W]*?)(@[0-9]+x)?(\.png|\.jpg)'
+pattern = '([\w\W]*?)(@[0-9]+x)?(\.png|\.jpg|\.jpeg)'
 dic = {}
 count = 0
 
